@@ -1,0 +1,34 @@
+.main-cant{
+    margin-top: -100px;
+    position:fixed;
+    display: flex;
+    background-color: black;
+    width: 100%;  
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-item{
+    color: white;
+    display: flex;
+    gap: 7rem;
+    font-weight: 500;
+}
+
+.nav-btn button{
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    margin-left: 50px;
+    width: 6rem;
+    height: 2.1rem;
+   
+}
+.nav-btn button:hover{
+    background-color: whitesmoke;
+    border: 2.3px solid white;
+    color: black;
+}
+
