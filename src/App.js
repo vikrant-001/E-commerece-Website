@@ -4,6 +4,7 @@ import Heading from './components/Heading';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import CartItems from './components/Cart/CartItems';
+import Overlay from './components/Cart/Overlay';
 const productsArr = [
 
   {
@@ -64,7 +65,9 @@ function App() {
         <Heading/>
         <div className='container'>
         <Store productsArr = {productsArr}/>
-        {showCart && <CartItems/>}
+        {showCart && <Overlay onClick = {cartHandler}>
+          <CartItems/>
+        </Overlay>}
         </div>
     </div>
     

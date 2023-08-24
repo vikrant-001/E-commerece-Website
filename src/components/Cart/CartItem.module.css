@@ -1,0 +1,30 @@
+.container{
+    width: 40%;
+    height: 600px;
+    background-color: aliceblue;
+    overflow: scroll;
+    margin: 0 auto;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+.heading{
+    margin-left: 29%;
+}
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn button{
+    width: 7rem;
+    background-color: chartreuse;
+    height: 2.5rem;
+    font-size: medium;
+    font-weight: 600;
+}

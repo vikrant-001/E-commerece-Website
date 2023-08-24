@@ -1,4 +1,8 @@
-const { Fragment } = require("react")
+
+import { useContext } from "react"
+import classes from "./CartItem.module.css"
+import CartProvider from "../../contextStore/CartProvider"
+
 
 const cartElements = [
 
@@ -41,18 +45,24 @@ const cartElements = [
     ]
     
     const CartItems = () => {
+        const ctx = useContext(CartProvider);
         return (
-            <Fragment>
+            <div className={classes.container}>
+                <h1 className={classes.heading}>CART ITEMS</h1>
                 {
                     cartElements.map((item) => (
-                        <div>
+                        <div className={classes.card}>
                             <img src= {item.imageUrl}/>
                             <p>{item.title}</p>
                             <p>{item.quantity}</p>
                         </div>
                     ))
                 }
-            </Fragment>
+                <div className={classes.btn}>
+                    <button>Place Order</button>
+                    <button>close</button>
+                </div>
+            </div>
         )
     }
     export default CartItems
