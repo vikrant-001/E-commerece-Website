@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import { useState } from 'react';
 import CartItems from './components/Cart/CartItems';
 import Overlay from './components/Cart/Overlay';
+import CartProvider from './components/cartContext/CartProvider';
 const productsArr = [
 
   {
@@ -52,7 +53,7 @@ const productsArr = [
   
   
 function App() {
-  const [showCart,setShowCart] = useState(true);
+  const [showCart,setShowCart] = useState(false);
 
   const cartHandler = (event) => {
     event.preventDefault();
@@ -60,7 +61,7 @@ function App() {
   }
 
   return (
-    <div>
+    <CartProvider>
         <Navbar onClick = {cartHandler}/>
         <Heading/>
         <div className='container'>
@@ -69,7 +70,7 @@ function App() {
           <CartItems/>
         </Overlay>}
         </div>
-    </div>
+    </CartProvider>
     
    
   );

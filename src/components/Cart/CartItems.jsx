@@ -1,7 +1,5 @@
 
-import { useContext } from "react"
 import classes from "./CartItem.module.css"
-import CartProvider from "../../contextStore/CartProvider"
 
 
 const cartElements = [
@@ -45,7 +43,6 @@ const cartElements = [
     ]
     
     const CartItems = () => {
-        const ctx = useContext(CartProvider);
         return (
             <div className={classes.container}>
                 <h1 className={classes.heading}>CART ITEMS</h1>

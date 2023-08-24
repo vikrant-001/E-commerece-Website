@@ -1,10 +1,13 @@
+
 import { useContext } from "react";
 import "./Navbar.css";
-import CartProvider from "../contextStore/CartProvider"
+import CartContext from "./cartContext/Cart-context";
+
+
 
 const Navbar = (props) => {
-    const cartCtx = useContext(CartProvider);
-    console.log(cartCtx)
+    const ctx = useContext(CartContext);
+    console.log(ctx)
     return (
         <div className="main-cant">
             <div className="nav-item">
@@ -14,6 +17,7 @@ const Navbar = (props) => {
             </div>
             <div className="nav-btn">
                 <button onClick={props.onClick}>Cart</button>
+                <p>{ctx.totalAmount}</p>
             </div>
         </div>
     )
