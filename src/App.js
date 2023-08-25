@@ -1,79 +1,18 @@
-import './App.css';
-import Store from './components/Store/Store';
-import Heading from './components/Heading';
-import Navbar from './components/Navbar';
-import { useState } from 'react';
-import CartItems from './components/Cart/CartItems';
-import Overlay from './components/Cart/Overlay';
-import CartProvider from './components/cartContext/CartProvider';
-const productsArr = [
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import About from './components/AboutPage/About'
+import RootLayOut from "./components/RootLayOut";
 
-  {
-  
-  title: 'Colors',
-  
-  price: 100,
-  
-  imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-  
-  },
-  
-  {
-  
-  title: 'Black and white Colors',
-  
-  price: 50,
-  
-  imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-  
-  },
-  
-  {
-  
-  title: 'Yellow and Black Colors',
-  
-  price: 70,
-  
-  imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-  
-  },
-  
-  {
-  
-  title: 'Blue Color',
-  
-  price: 100,
-  
-  imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
-  
+const router = createBrowserRouter([
+  {path:'/' ,
+   element: <RootLayOut/>,
+   children:[
+    // {path:'/store' ,element : <StorePage/>},
+    {path:'/about', element: <About/>}
+   ]
   }
-  
-  ]
-  
-  
-  
+])
 function App() {
-  const [showCart,setShowCart] = useState(false);
-
-  const cartHandler = (event) => {
-    event.preventDefault();
-    setShowCart(!showCart);
-  }
-
-  return (
-    <CartProvider>
-        <Navbar onClick = {cartHandler}/>
-        <Heading/>
-        <div className='container'>
-        <Store productsArr = {productsArr}/>
-        {showCart && <Overlay onClick = {cartHandler}>
-          <CartItems/>
-        </Overlay>}
-        </div>
-    </CartProvider>
-    
-   
-  );
+  return < RouterProvider router={router}/>
 }
 
 export default App;

@@ -1,5 +1,4 @@
 .main-cant{
-    margin-top: -100px;
     position:fixed;
     display: flex;
     background-color: black;
@@ -24,6 +23,10 @@
     font-size: larger;
     margin-top: 3px;
 
+}
+.active{
+    color: white;
+    text-decoration: none;
 }
 
 .nav-btn button{
