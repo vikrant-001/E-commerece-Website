@@ -3,8 +3,12 @@ import classes from './About.module.css'
 import fb from '../../asset/fb.avif'
 import yt from '../../asset/youtube.png'
 import sf from '../../asset/spotify.png'
+import { Fragment } from "react";
+import Heading from "../Heading";
 const About = () => {
     return (
+        <Fragment>
+        <Heading/>
         <div className={classes.aboutheader}>
             <div className={classes.mainheader}>
                 <h2>About</h2>
@@ -37,6 +41,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </Fragment>
     )
 }
 export default About

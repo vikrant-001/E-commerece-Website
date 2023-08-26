@@ -1,0 +1,54 @@
+.maingen{
+ margin-top: 55px;
+}
+
+.generics{
+    background-color: rgb(134, 98, 98);
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.generics h1{
+    font-size: 6.5rem;
+    color: white;
+    margin-top: -2rem;
+}
+
+.generics p{
+    border: 2px solid rgb(166, 166, 237);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: -3rem;
+    color: white;
+}
+
+.album {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+}
+.album h2{
+   margin: 0 auto;
+   margin-top: 1rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 2rem;
+}
+
+.gen{
+    background-color: rgb(176, 176, 228);
+    width: 100%;
+    height: 7rem;
+}
+
+.gen h2{
+ font-size: 3rem;
+ color: white;
+ margin-left: 5rem;
+ margin-top: 2rem;
+}

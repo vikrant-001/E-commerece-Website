@@ -12,7 +12,7 @@ const Navbar = (props) => {
     return (
         <div className="main-cant">
             <div className="nav-item">
-                <p>HOME</p>
+                <p><NavLink className= "active" to={'/'}>HOME</NavLink></p>
                 <p><NavLink className= "active" to={'/store'} >STORE</NavLink></p>
                 <p><NavLink className= "active" to={'/about'}>ABOUT</NavLink></p>
             </div>

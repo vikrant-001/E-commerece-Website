@@ -1,6 +1,7 @@
 .aboutheader{
     max-width: 80%;
     margin: 0 auto;
+    margin-top: -40px;
 }
 
 .mainheader{
@@ -8,6 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.mainheader h2{
+    margin-top: -20px;
 }
 .mainheader p{
     margin-top: -1rem;
