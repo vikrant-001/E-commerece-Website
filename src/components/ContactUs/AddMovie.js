@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 
 import classes from './AddMovie.module.css';
-import { json } from 'react-router-dom';
 
 function AddMovie(props) {
   const nameRef = useRef('');

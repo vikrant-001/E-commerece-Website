@@ -1,8 +1,5 @@
-import classes from "./Store.module.css"
-import Card from "./Card";
-import Heading from "../Heading";
 import { Fragment } from "react";
-import { Outlet} from "react-router-dom";
+import { useParams } from "react-router-dom";
 const productsArr = [
 
     {
@@ -46,21 +43,18 @@ const productsArr = [
     }
     
     ]
-const Store = () => {
-    
-    return (
-        <Fragment>
-        <Heading/>
-        <div className={classes.mainStore}>
-            
-            {
-                productsArr.map((item) =>(
-                    <Card key = {item.title} item = {item}/>
-                ))
-            }
-        </div>
-        <Outlet/>
-        </Fragment>
-    )
-}
-export default Store;
+
+
+const Detailsview = (props) => {
+    const params = useParams();
+    const data = productsArr.find((item) => item.id === params.id);
+   
+    return <Fragment>
+        <p>{data.title}</p>
+        <p>{data.price}</p>
+        <img src={data.imageUrl} alt=""/>
+        
+    </Fragment>
+} 
+
+export default Detailsview;
