@@ -11,8 +11,7 @@ const Navbar = (props) => {
     const ctx = useContext(CartContext);
     const authCtx = useContext(AuthContext);
 
-    const logoutHandler = (event) => {
-        event.preventDefault();
+    const logoutHandler = () => {
         authCtx.logout();
     }
 

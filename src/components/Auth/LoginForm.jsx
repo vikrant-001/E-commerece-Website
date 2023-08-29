@@ -1,10 +1,10 @@
 import { useContext, useRef, useState } from "react"
 import AuthContext from "../authStore/Auth-context";
+import classes from "./LoginForm.module.css"
 
 const LoginForm = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
-    const [isLoggin ,setIsLoggin] = useState(false);
     const [togle,istoggle] = useState(true);
     
 
@@ -75,15 +75,19 @@ const LoginForm = () => {
     }
 
     return (
-        <form onSubmit={togle ? submitHandler : submitHandler2}>
-            <label>Email</label>
-            <input type='email' ref = {emailRef}></input>
+        <form  className = {classes.mainlogin} onSubmit={togle ? submitHandler : submitHandler2}>
+            <div className={classes.inputF}>
+                <label>Email</label>
+                <input type='email' ref = {emailRef}></input>
+            </div>
 
-            <label>Password</label>
-            <input type='password' ref = {passwordRef}></input>
+            <div className={classes.inputF}>
+                <label>Password</label>
+                <input type='password' ref = {passwordRef}></input>
+            </div>
             
-            <div onClick={toggler}>{togle ? 'Create an Account' : 'Login in to Existing account'}</div>
-            <button type='submit'>{togle ? 'Sign up':'Log IN'}</button>
+            <div  className = {classes.togle} onClick={toggler}>{togle ? 'Create an Account' : 'Login in to Existing account'}</div>
+            <button className={classes.btn} type='submit'>{togle ? 'Sign up':'Log IN'}</button>
 
         </form>
     )

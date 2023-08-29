@@ -1,9 +1,11 @@
 import { useContext, useRef } from 'react';
 import classes from './ChangePass.module.css'
 import AuthContext from '../authStore/Auth-context';
+import { useNavigate } from 'react-router-dom';
 const ChangePass = () => {
     const passRef = useRef('');
-    const authCtx = useContext(AuthContext)
+    const authCtx = useContext(AuthContext);
+    const nevigate = useNavigate();
     const submitHandler = async (event) => {
         event.preventDefault();
 
@@ -24,6 +26,7 @@ const ChangePass = () => {
 
             const data = await response.json();
             console.log('Password Has Changed',data);
+            nevigate('/store');
             return data;
         }
 
