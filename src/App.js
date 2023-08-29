@@ -30,6 +30,13 @@ function App() {
   // return <RouterProvider router={router}/>
   const authCtx = useContext(AuthContext);
   const IsLog = authCtx.isLoggedIn
+
+  if(IsLog) {
+    setTimeout(() => {
+      authCtx.logout();
+    },5 * 60 * 1000)
+  }
+  
   return (
     // <AuthContextProvider>
       <Router>
